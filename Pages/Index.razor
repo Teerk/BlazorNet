@@ -1,0 +1,21 @@
+﻿@page "/"
+@inject IConfiguration configuracion
+
+<PageTitle>Index</PageTitle>
+
+<ModuleTitle nombreTitulo="@saludo"></ModuleTitle>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+
+@code{
+    public string saludo = "";
+
+    protected override void OnInitialized()
+    {
+        saludo = configuracion["helloMessage"];
+    }
+
+}

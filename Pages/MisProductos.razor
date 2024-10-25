@@ -1,0 +1,90 @@
+﻿@page "/productos"
+@using TestBlazorApp.Modelos
+
+@inject ILogger<MisProductos> logger;
+@inject IProductoService productoService;
+@inject NavigationManager navigationManager
+@inject IJSRuntime JSRuntime
+
+<ModuleTitle nombreTitulo="Productos"></ModuleTitle>
+<PageTitle>Productos</PageTitle>
+
+
+<style>
+    .contenedorCards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 280px);
+        grid-auto-rows: auto;
+        grid: 1rem;
+    }
+
+</style>
+
+
+
+<button class="btn btn-dark" @onclick="@(()=>navigationManager.NavigateTo("./addproducto"))">Ir a productos</button>
+@if (listaProductos?.Count > 0)
+{
+    <p>Estos son los productos @listaProductos.Count</p>
+
+    <div class="contenedorCards">
+        @foreach (var item in listaProductos)
+        {
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="@item.Images[0]" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Title</h5>
+                    <h5 class="card-title">url -> @item.Image</h5>
+                    <h5 class="card-title">@item.Price</h5>
+                    <p class="card-text">@item.Description</p>
+                    <a href="#" class="btn btn-primary"></a>
+                    <button title="eliminar" class="btn btn-danger btn-delete" @onclick="@(()=>DeleteTask(item))">Eliminar producto</button>
+                </div>
+            </div>
+
+        }
+    </div>
+}
+else
+{
+    <p>No hay productos para mostrar</p>
+}
+
+
+
+@code {
+
+    //lista de datos que vamos a necesitar
+    private List<Producto>? listaProductos;
+
+
+
+    // inicializacion de los datos iniciales del componente, siempre vamos a usarlo
+    protected override async Task OnInitializedAsync()
+    {
+        await GetProductos();
+    }
+
+
+    // llamar el servicio que devuelve los datos
+    private async Task  GetProductos()
+    {
+        listaProductos = await productoService.Get(); 
+    }
+
+    private async Task DeleteTask(Producto producto)
+    {
+        // if (!await JSRuntime.InvokeAsync<bool>("confirm",$"Seguro"))
+        // {
+        //     return;
+        // }
+        // else
+        // {
+            await productoService.Delete(producto.Id);
+            await GetProductos();
+        // }
+    }
+
+
+}

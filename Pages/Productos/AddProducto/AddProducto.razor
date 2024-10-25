@@ -1,0 +1,86 @@
+﻿@using TestBlazorApp.Modelos
+
+@page "/addproducto"
+@inject IProductoService productoService
+@inject ICategoriaService categoriaService
+@inject NavigationManager navigationManager
+
+<PageTitle>Agregar productos</PageTitle>
+<ModuleTitle nombreTitulo="Agregar productos"></ModuleTitle>
+
+<EditForm Model="@producto" OnSubmit="@Save">
+
+    @* <button class="btn btn-dark" @onclick="@(()=> NavigationManager.NavigateTo("./productos"))">Ir a productos</button> *@
+    <div class="row">
+        
+        <div class="col-8 form-group">
+            <label for="title" class="col-form-group">Titulo</label>
+            <InputText id="title" @bind-Value="producto.Title" required class="form-control"></InputText>
+        </div>
+
+        <div class="col-8 form-group">
+      <label for="price" class="col-form-group">Precio</label>
+    <InputNumber id="price" @bind-Value="Price" min="0" required class="form-control"></InputNumber>
+        </div>
+
+        <div class="row">
+            <div class="col form-group">
+                <label for="category" class="col-form-label">Categoria</label>
+                <InputSelect id="category" @bind-Value="producto.CategoryId" required class="form-control">
+                    <option>Select</option>
+                    @foreach (var item in listaCategorias)
+                    {
+                        <option value="@item.Id">@item.Name</option>                        
+                    }
+                </InputSelect>
+            </div>
+            <div class="col form-group">
+                <label for="image" class="col-form-label">Imagen</label>
+                <InputText id="image" @bind-Value="producto.Image" required class="form-control">
+
+                </InputText>
+            </div>
+            <div class="col form-group">
+                <label for="description" class="col-form-label">description</label>
+                <InputText id="group" @bind-Value="producto.Description" required class="form-control">
+
+                </InputText>
+            </div>
+            <hr />
+            <button class="btn btn-primary" type="submit">Save</button>
+        </div>
+
+
+    </div>
+
+
+
+
+
+</EditForm>
+
+
+@code {
+
+    private decimal? Price
+    {
+        get => producto.Price;
+        set => producto.Price = value;
+    }
+
+    private Producto producto = new();
+
+    List<Categoria> listaCategorias = new List<Categoria>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        listaCategorias = await categoriaService.GetCategorias();
+    }
+
+    private async Task Save()
+    {
+        producto.Images = new string[1] { producto.Image };
+        await productoService.AddProducto(producto);
+
+    }
+}

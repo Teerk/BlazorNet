@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cgarcia\\source\\repos\\TestBlazorApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C9FF7F9-BC63-43C8-A748-A422FE6427BE}|TestBlazorApp.csproj|c:\\users\\cgarcia\\source\\repos\\testblazorapp\\pages\\misproductos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C9FF7F9-BC63-43C8-A748-A422FE6427BE}|TestBlazorApp.csproj|solutionrelative:pages\\misproductos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C9FF7F9-BC63-43C8-A748-A422FE6427BE}|TestBlazorApp.csproj|c:\\users\\cgarcia\\source\\repos\\testblazorapp\\servicios\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C9FF7F9-BC63-43C8-A748-A422FE6427BE}|TestBlazorApp.csproj|solutionrelative:servicios\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C9FF7F9-BC63-43C8-A748-A422FE6427BE}|TestBlazorApp.csproj|c:\\users\\cgarcia\\source\\repos\\testblazorapp\\pages\\productos\\addproducto\\addproducto.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1C9FF7F9-BC63-43C8-A748-A422FE6427BE}|TestBlazorApp.csproj|solutionrelative:pages\\productos\\addproducto\\addproducto.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductoService.cs",
+              "DocumentMoniker": "C:\\Users\\cgarcia\\source\\repos\\TestBlazorApp\\Servicios\\ProductoService.cs",
+              "RelativeDocumentMoniker": "Servicios\\ProductoService.cs",
+              "ToolTip": "C:\\Users\\cgarcia\\source\\repos\\TestBlazorApp\\Servicios\\ProductoService.cs",
+              "RelativeToolTip": "Servicios\\ProductoService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwCgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T19:04:01.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddProducto.razor",
+              "DocumentMoniker": "C:\\Users\\cgarcia\\source\\repos\\TestBlazorApp\\Pages\\Productos\\AddProducto\\AddProducto.razor",
+              "RelativeDocumentMoniker": "Pages\\Productos\\AddProducto\\AddProducto.razor",
+              "ToolTip": "C:\\Users\\cgarcia\\source\\repos\\TestBlazorApp\\Pages\\Productos\\AddProducto\\AddProducto.razor",
+              "RelativeToolTip": "Pages\\Productos\\AddProducto\\AddProducto.razor",
+              "ViewState": "AgIAADQAAAAAAAAAAAAtwFIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-25T18:09:55.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MisProductos.razor",
+              "DocumentMoniker": "C:\\Users\\cgarcia\\source\\repos\\TestBlazorApp\\Pages\\MisProductos.razor",
+              "RelativeDocumentMoniker": "Pages\\MisProductos.razor",
+              "ToolTip": "C:\\Users\\cgarcia\\source\\repos\\TestBlazorApp\\Pages\\MisProductos.razor",
+              "RelativeToolTip": "Pages\\MisProductos.razor",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCIAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-25T18:04:08.257Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
